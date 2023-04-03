@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Pixel Artify",
+  "version": "1.0",
+  "description": "Converte imagens de um site em arte pixel.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon16.png",
+    "icons": [
+      {
+        "src": "icon16.png",
+        "sizes": "16x16",
+        "type": "image/png"
+      },
+      {
+        "src": "icon32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
